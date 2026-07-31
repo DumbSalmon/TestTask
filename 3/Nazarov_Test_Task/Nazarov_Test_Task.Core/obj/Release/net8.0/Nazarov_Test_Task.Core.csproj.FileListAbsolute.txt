@@ -1,0 +1,12 @@
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\bin\Release\net8.0\Nazarov_Test_Task.Core.deps.json
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\bin\Release\net8.0\Nazarov_Test_Task.Core.dll
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\bin\Release\net8.0\Nazarov_Test_Task.Core.pdb
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.csproj.AssemblyReference.cache
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.AssemblyInfoInputs.cache
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.AssemblyInfo.cs
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.csproj.CoreCompileInputs.cache
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.dll
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\refint\Nazarov_Test_Task.Core.dll
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\Nazarov_Test_Task.Core.pdb
+C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task.Core\obj\Release\net8.0\ref\Nazarov_Test_Task.Core.dll

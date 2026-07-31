@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 8px 14px;
+    border: 1px solid #8b9b6b;
+    border-radius: 4px;
+    color: #1f3a24;
+    background-color: #b3f82b;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9acc36;
+}
+
+#delete-button {
+    border-color: #7848a8;
+    color: white;
+    background-color: #9c4eea;
+}
+
+#delete-button:hover {
+    background-color: #8944cf;
+}
+
+.filter-control {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.message {
+    min-height: 20px;
+    margin-bottom: 10px;
+}
+
+.message.error {
+    color: #b91c1c;
+}
+
+.message.success {
+    color: #15803d;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e7eb;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+tbody tr.selected {
+    background-color: #bfdbfe;
+}
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-card {
+    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.modal-card h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-row input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-row input[readonly] {
+    background-color: #eeeeee;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.form-message {
+    min-height: 20px;
+    margin: 0 0 12px;
+    color: #8b2e2e;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+    .toolbar {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}

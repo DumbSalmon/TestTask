@@ -1,0 +1,830 @@
+2026-07-31 01:07:55.0725|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 01:07:55.0725|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 01:07:55.0725|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 01:07:55.0725|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 01:09:24.4294|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 01:09:24.4714|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 43.0150ms 
+2026-07-31 01:09:24.6971|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 01:09:24.7575|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 60.3986ms 
+2026-07-31 01:09:29.4504|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/Employees - - - 
+2026-07-31 01:09:29.4504|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-07-31 01:09:29.4504|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 01:09:29.4692|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 01:09:29.9726|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 01:09:30.0014|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.DTOs.EmployeeResponseDto, Nazarov_Test_Task, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 01:09:30.0127|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 540.0927ms 
+2026-07-31 01:09:30.0127|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 01:09:30.0127|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/Employees returned 200 in 558 ms 
+2026-07-31 01:09:30.0127|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/Employees - 200 - application/json;+charset=utf-8 567.1821ms 
+2026-07-31 01:10:29.6883|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/Employees - application/json 77 
+2026-07-31 01:10:29.6883|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 01:10:29.6952|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 01:10:29.6952|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2026-07-31 01:10:29.7177|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 22.0493ms 
+2026-07-31 01:10:29.7177|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 01:10:29.7177|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/Employees returned 400 in 29 ms 
+2026-07-31 01:10:29.7177|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/Employees - 400 - application/problem+json;+charset=utf-8 30.0682ms 
+2026-07-31 01:10:58.2452|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/Employees/salary-update - application/json 40 
+2026-07-31 01:10:58.2452|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment (Nazarov_Test_Task)' 
+2026-07-31 01:10:58.2452|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UpdateSalaryForDepartment", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.DTOs.UpdateSalaryForDepartmentResultDto]]] UpdateSalaryForDepartment(Nazarov_Test_Task.DTOs.UpdateSalaryForDepartmentDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 01:10:58.3183|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment (Nazarov_Test_Task) in 69.0181ms 
+2026-07-31 01:10:58.3183|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment (Nazarov_Test_Task)' 
+2026-07-31 01:10:58.3183|WARN|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|PostgreSQL rejected request POST /api/Employees/salary-update Npgsql.PostgresException (0x80004005): P0001: Выбранного отдела 5 не существует
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment(UpdateSalaryForDepartmentDto request) in C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task\Controllers\EmployeeController.cs:line 199
+   at Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment(UpdateSalaryForDepartmentDto request) in C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task\Controllers\EmployeeController.cs:line 201
+   at Nazarov_Test_Task.Controllers.EmployeesController.UpdateSalaryForDepartment(UpdateSalaryForDepartmentDto request) in C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task\Controllers\EmployeeController.cs:line 217
+   at lambda_method23(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task\Middleware\ApiLoggingAndExceptionMiddleware.cs:line 25
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: P0001
+    MessageText: Выбранного отдела 5 не существует
+    Where: функция PL/pgSQL updatesalaryfordepartment(integer,integer), строка 13, оператор RAISE
+    File: pl_exec.c
+    Line: 3923
+    Routine: exec_stmt_raise
+2026-07-31 01:10:58.3394|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/Employees/salary-update - 400 - application/json;+charset=utf-8 94.1802ms 
+2026-07-31 01:21:05.9448|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2026-07-31 02:41:42.5213|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 02:41:42.5288|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 02:41:42.5288|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 02:41:42.5288|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 02:41:50.0092|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 02:41:50.0640|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 56.8718ms 
+2026-07-31 02:41:50.3197|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 02:41:50.3754|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 55.6957ms 
+2026-07-31 02:41:51.7167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 02:41:51.7167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 1.5511ms 
+2026-07-31 02:41:51.8146|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 02:41:51.8146|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 2.8904ms 
+2026-07-31 02:52:37.3419|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE http://localhost:5178/api/Employees/17 - - - 
+2026-07-31 02:52:37.3419|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-07-31 02:52:37.3419|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 02:52:37.3628|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 02:52:37.9499|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 02:52:37.9911|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 02:52:37.9958|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task) in 629.2331ms 
+2026-07-31 02:52:37.9958|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 02:52:37.9958|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP DELETE /api/Employees/17 returned 400 in 650 ms 
+2026-07-31 02:52:37.9958|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE http://localhost:5178/api/Employees/17 - 400 - text/plain;+charset=utf-8 658.9832ms 
+2026-07-31 03:58:19.8648|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2026-07-31 05:02:14.1643|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 05:02:14.1643|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 05:02:14.1643|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 05:02:14.1643|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 05:02:47.9754|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:02:48.0822|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-07-31 05:02:48.0822|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 3 ms 
+2026-07-31 05:02:48.0890|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 115.0084ms 
+2026-07-31 05:02:48.0890|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:02:48.1025|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/favicon.ico - - - 
+2026-07-31 05:02:48.1025|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /favicon.ico returned 404 in 0 ms 
+2026-07-31 05:02:48.1025|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/favicon.ico - 404 0 - 1.4510ms 
+2026-07-31 05:02:48.1025|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/favicon.ico, Response status code: 404 
+2026-07-31 05:21:57.2052|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2026-07-31 05:22:03.9103|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 05:22:03.9185|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 05:22:03.9185|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 05:22:03.9185|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 05:22:08.0058|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:22:08.0071|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-07-31 05:22:08.0245|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 2 ms 
+2026-07-31 05:22:08.0245|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 22.0539ms 
+2026-07-31 05:22:08.0245|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:22:18.0950|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 05:22:18.1306|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 35.4660ms 
+2026-07-31 05:22:18.3497|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 05:22:18.4114|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 61.6929ms 
+2026-07-31 05:22:25.2209|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:22:25.2209|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 0 ms 
+2026-07-31 05:22:25.2209|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 1.3142ms 
+2026-07-31 05:22:25.2209|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:22:26.5658|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:22:26.5658|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 0 ms 
+2026-07-31 05:22:26.5658|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 0.9209ms 
+2026-07-31 05:22:26.5658|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:22:27.5992|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:22:27.5992|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 0 ms 
+2026-07-31 05:22:27.5992|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 0.7787ms 
+2026-07-31 05:22:27.6002|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:23:37.6543|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/Frontend/ - - - 
+2026-07-31 05:23:37.6543|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /Frontend/ returned 404 in 0 ms 
+2026-07-31 05:23:37.6543|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/Frontend/ - 404 0 - 0.6652ms 
+2026-07-31 05:23:37.6543|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/Frontend/, Response status code: 404 
+2026-07-31 05:26:59.8781|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2026-07-31 05:27:13.9845|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 05:27:13.9917|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 05:27:13.9917|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 05:27:13.9917|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\barry\source\repos\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 05:27:17.3603|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:27:17.3776|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2026-07-31 05:27:17.3776|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 2 ms 
+2026-07-31 05:27:17.3776|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 22.6372ms 
+2026-07-31 05:27:17.3822|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:27:26.2932|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/ - - - 
+2026-07-31 05:27:26.2932|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET / returned 404 in 0 ms 
+2026-07-31 05:27:26.2932|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/ - 404 0 - 2.0405ms 
+2026-07-31 05:27:26.2932|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/, Response status code: 404 
+2026-07-31 05:27:27.8997|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/Frontend/ - - - 
+2026-07-31 05:27:27.8997|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /Frontend/ returned 404 in 0 ms 
+2026-07-31 05:27:27.8997|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/Frontend/ - 404 0 - 1.9943ms 
+2026-07-31 05:27:27.8997|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5178/Frontend/, Response status code: 404 
+2026-07-31 05:33:52.6486|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:33:52.6486|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:33:52.6803|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:33:52.7009|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:33:53.3827|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:33:53.4166|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:33:53.4368|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 731.3032ms 
+2026-07-31 05:33:53.4368|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:33:53.4368|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 788 ms 
+2026-07-31 05:33:53.4368|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 794.0752ms 
+2026-07-31 05:40:36.9835|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:40:36.9835|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:40:36.9835|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:36.9835|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:40:37.0534|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:40:37.0543|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:40:37.0543|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 69.7844ms 
+2026-07-31 05:40:37.0543|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:37.0543|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 70 ms 
+2026-07-31 05:40:37.0543|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 71.8601ms 
+2026-07-31 05:40:37.1542|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:40:37.1542|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:40:37.1542|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:37.1542|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:40:37.1654|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:40:37.1654|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:40:37.1654|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 11.2291ms 
+2026-07-31 05:40:37.1654|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:37.1654|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 11 ms 
+2026-07-31 05:40:37.1654|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 12.6297ms 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:40:39.1641|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 2.2951ms 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:40:39.1641|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 05:40:39.1641|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 3.4359ms 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:41:37.3729|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 1.3586ms 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 66 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:41:37.3729|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:41:37.3837|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:41:37.4482|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:41:37.4664|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:41:37.5496|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO public.employee (chief_id, department_id, name, salary)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id; 
+2026-07-31 05:41:37.5613|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto'. 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 185.7226ms 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:41:37.5696|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 201 in 193 ms 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 201 - application/json;+charset=utf-8 193.4251ms 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:41:37.5696|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 2.0386ms 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:41:37.5696|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 05:41:37.5696|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 2.8123ms 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:42:11.8077|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.8705ms 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 66 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:42:11.8077|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 3.9831ms 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:42:11.8077|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 4 ms 
+2026-07-31 05:42:11.8077|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 5.3533ms 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:42:28.6090|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.7169ms 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 65 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:42:28.6090|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:42:28.6090|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:42:28.6090|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:42:28.6494|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO public.employee (chief_id, department_id, name, salary)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id; 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto'. 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 38.5008ms 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:42:28.6494|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 201 in 39 ms 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 201 - application/json;+charset=utf-8 39.3885ms 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:42:28.6494|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.8122ms 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:42:28.6494|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 05:42:28.6494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 2.6282ms 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:52:58.6881|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.7698ms 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 68 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:52:58.6881|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:52:58.7238|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:52:58.7257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:52:58.7257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO public.employee (chief_id, department_id, name, salary)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id; 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto'. 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 39.4094ms 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:52:58.7257|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 201 in 39 ms 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 201 - application/json;+charset=utf-8 40.2403ms 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:52:58.7257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.6668ms 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:52:58.7257|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 05:52:58.7257|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 2.7644ms 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:14.2181|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.7661ms 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:14.2181|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:14.2181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:14.2181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:55:14.2294|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:55:14.2502|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+UPDATE public.employee SET salary = @p0
+WHERE id = @p1; 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto'. 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 29.9824ms 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:14.2502|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 200 in 30 ms 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 31.0661ms 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:14.2502|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.2069ms 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:55:14.2502|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 1 ms 
+2026-07-31 05:55:14.2502|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 1.8666ms 
+2026-07-31 05:55:33.2701|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:55:33.2701|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:33.2701|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:55:33.2701|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.5959ms 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:33.2724|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 1.9114ms 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:33.2724|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:33.2724|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.7053ms 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:37.6714|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.3928ms 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:37.6714|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 3 ms 
+2026-07-31 05:55:37.6714|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 3.6242ms 
+2026-07-31 05:55:42.5839|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 05:55:42.5839|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:42.5839|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.6080ms 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:42.5845|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 1.7281ms 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:42.5845|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:42.5845|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.3607ms 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:43.1852|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.2045ms 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.1852|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:43.1852|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.9040ms 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:43.4486|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 1.6976ms 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.4486|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:43.4486|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.4496ms 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:43.7304|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.1815ms 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:43.7304|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:43.7304|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 3.3783ms 
+2026-07-31 05:55:44.0052|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:44.0052|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:44.0052|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:44.0052|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:44.0084|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:44.0084|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:44.0084|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.8441ms 
+2026-07-31 05:55:44.0084|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:44.0084|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 3 ms 
+2026-07-31 05:55:44.0084|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 3.7965ms 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 78 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:55:44.9802|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.2604ms 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 05:55:44.9802|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 05:55:44.9802|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 3.1991ms 
+2026-07-31 05:59:21.5135|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:59:21.5135|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:59:21.5135|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:59:21.5135|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:59:21.5897|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:59:21.5897|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:59:21.5897|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 75.6663ms 
+2026-07-31 05:59:21.5897|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:59:21.5897|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 76 ms 
+2026-07-31 05:59:21.5897|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 77.2691ms 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees/20 - - - 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:59:30.1225|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees/20 returned 204 in 0 ms 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees/20 - 204 - - 0.9053ms 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE http://localhost:5178/api/employees/20 - - - 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:59:30.1225|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 05:59:30.1675|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:59:30.1675|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 05:59:30.1675|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+DELETE FROM public.employee
+WHERE id = @p0; 
+2026-07-31 05:59:30.1675|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor|Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task) in 12.1319ms 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 05:59:30.1799|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP DELETE /api/employees/20 returned 200 in 54 ms 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE http://localhost:5178/api/employees/20 - 200 0 text/plain;+charset=utf-8 54.6883ms 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 05:59:30.1799|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.7328ms 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 05:59:30.1799|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 05:59:30.1799|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 2.6420ms 
+2026-07-31 06:19:15.3775|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 06:19:15.3775|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:19:15.3775|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:19:15.3775|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:19:15.4443|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 06:19:15.4443|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 06:19:15.4443|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 66.8195ms 
+2026-07-31 06:19:15.4443|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:19:15.4443|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 67 ms 
+2026-07-31 06:19:15.4443|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 67.9573ms 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:19:17.9057|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.9639ms 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:19:17.9057|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 06:19:17.9057|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 3.2291ms 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:21:46.4636|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 1.8319ms 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:21:46.4636|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 2 ms 
+2026-07-31 06:21:46.4636|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 2.8489ms 
+2026-07-31 06:26:31.0427|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/api/employees - - - 
+2026-07-31 06:26:31.0427|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:26:31.0427|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:26:31.0427|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:26:31.0750|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 06:26:31.0750|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 06:26:31.0750|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 31.7275ms 
+2026-07-31 06:26:31.0750|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 06:26:31.0750|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 32 ms 
+2026-07-31 06:26:31.0750|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/api/employees - 200 - application/json;+charset=utf-8 33.4718ms 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:26:39.1099|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.7541ms 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 52 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:26:39.1099|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 06:26:39.1099|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 3.2484ms 
+2026-07-31 06:26:39.1164|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:39.1164|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 3 ms 
+2026-07-31 06:26:39.1164|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 4.3046ms 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 52 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:26:40.2007|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 1.8767ms 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:40.2007|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 06:26:40.2007|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.8608ms 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 52 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:26:40.3757|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 2.7754ms 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:26:40.3757|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 3 ms 
+2026-07-31 06:26:40.3757|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 3.6459ms 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 OPTIONS http://localhost:5178/api/employees - - - 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:29:15.8908|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees returned 204 in 0 ms 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 OPTIONS http://localhost:5178/api/employees - 204 - - 0.4627ms 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5178/api/employees - application/json 52 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Upsert", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]] Upsert(Nazarov_Test_Task.Core.DTOs.EmployeeUpsertDto) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 06:29:15.8908|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM public.department AS d
+    WHERE d.id = @__departmentId_0) 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task) in 1.9353ms 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Upsert (Nazarov_Test_Task)' 
+2026-07-31 06:29:15.8908|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP POST /api/employees returned 400 in 2 ms 
+2026-07-31 06:29:15.8908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5178/api/employees - 400 - text/plain;+charset=utf-8 2.5497ms 
+2026-07-31 07:27:13.2445|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7137 
+2026-07-31 07:27:13.2445|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 07:27:13.2784|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 07:27:13.2784|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 07:27:13.2784|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 07:27:13.7705|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/index.html - - - 
+2026-07-31 07:27:13.8863|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/index.html - 200 - text/html;charset=utf-8 121.8317ms 
+2026-07-31 07:27:13.8863|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - - - 
+2026-07-31 07:27:13.9002|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript;+charset=utf-8 4.8120ms 
+2026-07-31 07:27:13.9256|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_vs/browserLink - - - 
+2026-07-31 07:27:13.9519|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 27.0001ms 
+2026-07-31 07:27:14.1301|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - - - 
+2026-07-31 07:27:14.1460|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 16.6884ms 
+2026-07-31 07:27:56.1496|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/api/employees - - - 
+2026-07-31 07:27:56.1677|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:27:56.1677|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:27:56.1832|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:27:56.8952|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 07:27:56.9348|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 07:27:56.9452|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 757.5202ms 
+2026-07-31 07:27:56.9452|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:27:56.9452|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 781 ms 
+2026-07-31 07:27:56.9452|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/api/employees - 200 - application/json;+charset=utf-8 801.0650ms 
+2026-07-31 07:29:41.1661|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7137 
+2026-07-31 07:29:41.1661|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 07:29:41.2463|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 07:29:41.2463|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 07:29:41.2463|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 07:29:41.5901|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/index.html - - - 
+2026-07-31 07:29:41.7102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/index.html - 200 - text/html;charset=utf-8 124.6605ms 
+2026-07-31 07:29:41.7102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - - - 
+2026-07-31 07:29:41.7275|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript;+charset=utf-8 5.0322ms 
+2026-07-31 07:29:41.7485|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_vs/browserLink - - - 
+2026-07-31 07:29:41.7724|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 24.4111ms 
+2026-07-31 07:29:41.9559|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - - - 
+2026-07-31 07:29:41.9713|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 16.1100ms 
+2026-07-31 07:29:51.6194|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 07:29:51.6568|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 07:29:51.6568|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 07:29:51.6568|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 07:29:51.9528|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 07:29:52.0603|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 111.9958ms 
+2026-07-31 07:29:52.0774|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - - - 
+2026-07-31 07:29:52.0774|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript;+charset=utf-8 2.5769ms 
+2026-07-31 07:29:52.0975|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/_vs/browserLink - - - 
+2026-07-31 07:29:52.1183|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 20.8726ms 
+2026-07-31 07:29:52.3058|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 07:29:52.3058|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 10.0162ms 
+2026-07-31 07:33:33.0566|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 07:33:33.0911|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 07:33:33.0911|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 07:33:33.0911|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 07:33:33.4444|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 
+2026-07-31 07:33:33.5527|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - 200 - text/html;charset=utf-8 112.5074ms 
+2026-07-31 07:33:33.5670|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - - - 
+2026-07-31 07:33:33.5697|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript;+charset=utf-8 2.7679ms 
+2026-07-31 07:33:33.5952|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/_vs/browserLink - - - 
+2026-07-31 07:33:33.6169|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 23.0853ms 
+2026-07-31 07:33:33.8240|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 
+2026-07-31 07:33:33.8240|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 8.9768ms 
+2026-07-31 07:33:42.8425|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7137 
+2026-07-31 07:33:42.8508|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5178 
+2026-07-31 07:33:42.8775|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-07-31 07:33:42.8775|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-07-31 07:33:42.8775|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\ТЗ\3\Nazarov_Test_Task\Nazarov_Test_Task 
+2026-07-31 07:33:43.5587|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/index.html - - - 
+2026-07-31 07:33:43.6642|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/index.html - 200 - text/html;charset=utf-8 109.3698ms 
+2026-07-31 07:33:43.6642|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - - - 
+2026-07-31 07:33:43.6804|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript;+charset=utf-8 4.4157ms 
+2026-07-31 07:33:43.7021|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/_vs/browserLink - - - 
+2026-07-31 07:33:43.7236|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 21.8404ms 
+2026-07-31 07:33:43.8970|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - - - 
+2026-07-31 07:33:43.9091|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 12.2671ms 
+2026-07-31 07:33:46.6335|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/api/employees - - - 
+2026-07-31 07:33:46.6478|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:46.6478|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:46.6478|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:33:47.4087|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 07:33:47.4412|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 07:33:47.4497|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 786.3026ms 
+2026-07-31 07:33:47.4497|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:47.4497|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 805 ms 
+2026-07-31 07:33:47.4497|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/api/employees - 200 - application/json;+charset=utf-8 821.5573ms 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7137/api/employees/19 - - - 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:53.9487|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees/19 returned 204 in 1 ms 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7137/api/employees/19 - 204 - - 2.7911ms 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 DELETE https://localhost:7137/api/employees/19 - - - 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:53.9487|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 07:33:53.9622|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:33:54.0397|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 07:33:54.1489|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (40ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+DELETE FROM public.employee
+WHERE id = @p0; 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor|Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task) in 193.7165ms 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 07:33:54.1489|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP DELETE /api/employees/19 returned 200 in 201 ms 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 DELETE https://localhost:7137/api/employees/19 - 200 0 text/plain;+charset=utf-8 202.1886ms 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/api/employees - - - 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:54.1489|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:33:54.1736|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 07:33:54.1736|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 07:33:54.1736|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 13.8686ms 
+2026-07-31 07:33:54.1736|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:54.1736|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 14 ms 
+2026-07-31 07:33:54.1736|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/api/employees - 200 - application/json;+charset=utf-8 15.6854ms 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 OPTIONS https://localhost:7137/api/employees/21 - - - 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:56.6249|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP OPTIONS /api/employees/21 returned 204 in 0 ms 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 OPTIONS https://localhost:7137/api/employees/21 - 204 - - 2.1707ms 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 DELETE https://localhost:7137/api/employees/21 - - - 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 07:33:56.6249|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:33:56.6330|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT e.id, e.chief_id, e.department_id, e.name, e.salary
+FROM public.employee AS e
+WHERE e.id = @__id_0
+LIMIT 1 
+2026-07-31 07:33:56.6753|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+DELETE FROM public.employee
+WHERE id = @p0; 
+2026-07-31 07:33:56.6753|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor|Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8 
+2026-07-31 07:33:56.6753|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task) in 46.3131ms 
+2026-07-31 07:33:56.6753|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.Delete (Nazarov_Test_Task)' 
+2026-07-31 07:33:56.6753|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP DELETE /api/employees/21 returned 200 in 46 ms 
+2026-07-31 07:33:56.6753|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 DELETE https://localhost:7137/api/employees/21 - 200 0 text/plain;+charset=utf-8 47.9717ms 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7137/api/employees - - - 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto]]] GetAll() on controller Nazarov_Test_Task.Controllers.EmployeesController (Nazarov_Test_Task). 
+2026-07-31 07:33:56.6802|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e.id AS "Id", e.department_id AS "DepartmentId", e.chief_id AS "ChiefId", e.name AS "Name", e.salary AS "Salary"
+FROM public.employee AS e
+ORDER BY e.id 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Nazarov_Test_Task.Core.DTOs.EmployeeResponseDto, Nazarov_Test_Task.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task) in 5.2826ms 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Nazarov_Test_Task.Controllers.EmployeesController.GetAll (Nazarov_Test_Task)' 
+2026-07-31 07:33:56.6802|INFO|Nazarov_Test_Task.Middleware.ApiLoggingAndExceptionMiddleware|HTTP GET /api/employees returned 200 in 5 ms 
+2026-07-31 07:33:56.6802|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7137/api/employees - 200 - application/json;+charset=utf-8 6.5327ms 

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Nazarov_Test_Task.Core/Nazarov_Test_Task.Core.csproj" />
+  <Project Path="Nazarov_Test_Task/Nazarov_Test_Task.csproj" />
+</Solution>

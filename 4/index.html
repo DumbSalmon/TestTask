@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление сотрудниками</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="page-container">
+        <h1>Управление сотрудниками</h1>
+
+        <section class="toolbar" aria-label="Действия с сотрудниками">
+            <button id="load-button" type="button">Получить данные</button>
+            <button id="create-button" type="button">Создать</button>
+            <button id="edit-button" type="button">Редактировать</button>
+            <button id="delete-button" type="button">Удалить</button>
+            <button id="salary-update-button" type="button">Индексировать</button>
+        </section>
+
+        <label class="filter-control">
+            <input id="max-salary-checkbox" type="checkbox">
+            Показать только сотрудника с максимальной зарплатой
+        </label>
+
+        <p id="message" class="message" aria-live="polite"></p>
+
+        <section class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>DEPARTMENT_ID</th>
+                        <th>CHIEF_ID</th>
+                        <th>NAME</th>
+                        <th>SALARY</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-body">
+                    <!-- Строки сотрудников добавит JavaScript. -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="employee-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <h2 id="employee-modal-title">Создание</h2>
+
+            <form id="employee-form">
+                <p id="employee-form-message" class="form-message" aria-live="polite"></p>
+                <div class="form-row">
+                    <label for="employee-id">ID</label>
+                    <input id="employee-id" name="id" type="number" readonly>
+                </div>
+
+                <div class="form-row">
+                    <label for="department-id">DEPARTMENT_ID</label>
+                    <input id="department-id" name="departmentId" type="number" min="1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="chief-id">CHIEF_ID</label>
+                    <input id="chief-id" name="chiefId" type="number" min="1">
+                </div>
+
+                <div class="form-row">
+                    <label for="employee-name">NAME</label>
+                    <input id="employee-name" name="name" type="text" maxlength="100" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="salary">SALARY</label>
+                    <input id="salary" name="salary" type="number" min="1" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="employee-close-button" type="button">Закрыть</button>
+                    <button type="submit">Ок</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="salary-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <h2>Индексация зарплаты</h2>
+
+            <form id="salary-form">
+                <p id="salary-form-message" class="form-message" aria-live="polite"></p>
+                <div class="form-row">
+                    <label for="salary-department-id">ID отдела</label>
+                    <input id="salary-department-id" name="departmentId" type="number" min="1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="salary-percent">Процент повышения</label>
+                    <input id="salary-percent" name="percent" type="number" min="1" value="5" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="salary-close-button" type="button">Закрыть</button>
+                    <button type="submit">Ок</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
